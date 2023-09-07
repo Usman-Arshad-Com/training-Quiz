@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #ddd; }
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto; }
+
+.row {
+  display: flex; }
+
+.bg-navy {
+  background-color: #F2B760; }
+
+.bg-black {
+  background-color: #191A1B; }
+
+.bg-white {
+  background-color: #fff; }
+
+.cards-wrapper {
+  padding: 130px 50px; }
+
+.card-block {
+  width: 25%;
+  overflow: hidden;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  position: relative; }
+  .card-block:first-child {
+    border-radius: 20px 0px 0px 20px; }
+  .card-block:last-child {
+    clip-path: none;
+    border-radius: 0px 20px 20px 0px; }
+
+.card-media {
+  position: relative; }
+  .card-media .card-image {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s; }
+    .card-media .card-image img {
+      width: 100%;
+      height: 100%; }
+  .card-media .card-logo {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s; }
+
+.card-block:hover .card-image {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s; }
+
+.card-block:hover .card-logo {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s; }
+
+.card-block:hover .card-description {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  height: auto;
+  transition: all 0.5s; }
+
+.card-block:hover .card-content {
+  position: relative;
+  height: auto; }
+  .card-block:hover .card-content p,
+  .card-block:hover .card-content button {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s;
+    height: auto; }
+
+.card-description {
+  padding: 20px 60px 20px 40px;
+  transition: all 0.7s; }
+  .card-description h3 {
+    margin-bottom: 20px;
+    white-space: nowrap;
+    font-size: 14px; }
+
+.card-content {
+  position: absolute;
+  height: 0;
+  visibility: hidden; }
+  .card-content p {
+    margin-bottom: 10px; }
+  .card-content button {
+    text-transform: capitalize;
+    color: #F2B760;
+    text-decoration: none;
+    border-bottom: 2px solid #191A1B;
+    border-width: 0 0 2px 0;
+    border-color: #191A1B;
+    background: transparent;
+    font-weight: bold;
+    padding-bottom: 5px;
+    cursor: pointer; }
+
+.card-1 {
+  z-index: 5; }
+
+.card-2 {
+  z-index: 4; }
+
+.card-3 {
+  z-index: 3; }
+
+.card-4 {
+  z-index: 2; }
+
+.card-5 {
+  z-index: 1; }
+
+.card-2,
+.card-3,
+.card-4,
+.card-5 {
+  margin-left: -72px; }
+
+.pad-left {
+  padding-left: 75px !important; }
+
+/* Demo popup styling */
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 2; }
+
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 50%;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 100; }
+  .popup-container p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: bold; }
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 30px;
+  width: 30px;
+  height: 30px; }
